@@ -51,9 +51,9 @@ void *nextList(List *list) {
     return NULL;
   }
 
-  list->head = list->current
+  list->head = list->current;
 
-               return list->current->data;
+  return list->current->data;
 }
 
 void *lastList(List *list) { return NULL; }
