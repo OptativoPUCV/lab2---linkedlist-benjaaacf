@@ -241,3 +241,18 @@ list.c:39:59: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 bce8cab
+Thu 24 Aug 2023 08:49:57 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:39:53: error: ‘data’ undeclared (first use in this function)
+   39 | void *firstList(List *list) { list->current->next = data; }
+      |                                                     ^~~~
+list.c:39:53: note: each undeclared identifier is reported only once for each function it appears in
+list.c:39:59: error: control reaches end of non-void function [-Werror=return-type]
+   39 | void *firstList(List *list) { list->current->next = data; }
+      |                                                           ^
+cc1: all warnings being treated as errors
+Compilation failed
+3ce5a65
