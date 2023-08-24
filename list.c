@@ -36,7 +36,15 @@ List *createList() {
   return list;
 }
 
-void *firstList(List *list) { list->current->next = data; }
+void *firstList(List *list) {
+  if (!list->head) {
+    return NULL;
+  }
+
+  list->current = list->head;
+
+  return list->head->data;
+}
 
 void *nextList(List *list) { return NULL; }
 
