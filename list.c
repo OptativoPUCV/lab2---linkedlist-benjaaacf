@@ -45,8 +45,8 @@ void *lastList(List *list) { return NULL; }
 void *prevList(List *list) { return NULL; }
 
 void pushFront(List *list, void *data) {
-  Node *n = createNode(void *data);
-
+  
+  Node *n = createNode(data);
   n->next = list->head;
 
   if (list->head) {
