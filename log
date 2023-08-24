@@ -23,3 +23,14 @@ list.c:35:8: error: ‘List’ {aka ‘struct List’} has no member named ‘si
       |        ^~
 Compilation failed
 5e52280
+Thu 24 Aug 2023 08:19:50 PM UTC: 
+ list.c | 35 +++++++++++------------------------
+ 1 file changed, 11 insertions(+), 24 deletions(-)
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/time.h:29,
+                 from test.c:4:
+list.c: In function ‘createList’:
+list.c:33:9: error: expected identifier before ‘(’ token
+   33 |   list->NULL;
+      |         ^~~~
+Compilation failed
+8b50bef
