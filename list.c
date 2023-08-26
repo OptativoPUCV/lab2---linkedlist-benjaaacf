@@ -61,13 +61,13 @@ void *nextList(List *list) {
 }
 
 void *lastList(List *list) {
-  if (list->head == NULL) {
+  if (list->head != NULL) {
     return NULL;
   }
 
   Node *tempo = list->head;
 
-  while (tempo->next == NULL) {
+  while (tempo->next != NULL) {
     tempo = tempo->next;
   }
 
