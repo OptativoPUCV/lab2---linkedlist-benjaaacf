@@ -73,7 +73,7 @@ void *lastList(List *list) {
 
   list->current = tempo;
 
-  return &(tempo->data);
+  return &(list->current->data);
 }
 
 void *prevList(List *list) { return NULL; }
