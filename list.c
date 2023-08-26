@@ -64,6 +64,12 @@ void *lastList(List *list) {
   if (list->head == NULL) {
     return NULL;
   }
+
+  Node *tempo = list->head;
+
+  while (tempo->next != NULL) {
+    tempo = tempo->next;
+  }
 }
 
 void *prevList(List *list) { return NULL; }
