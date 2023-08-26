@@ -89,7 +89,7 @@ void *prevList(List *list) {
   }
   list->current = tempo;
 
-  return (tempo->data);
+  return (list->tempo->data);
 }
 
 void pushFront(List *list, void *data) {
