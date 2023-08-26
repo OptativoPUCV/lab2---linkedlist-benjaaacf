@@ -77,18 +77,19 @@ void *lastList(List *list) {
 }
 
 void *prevList(List *list) {
-  if (lista->head == NULL || list->current || list->current == list->head) {
+  if (list->head == NULL || list->current == NULL ||
+      list->current == list->head) {
     return NULL;
   }
 
   Node *tempo = list->current;
 
   while (tempo->next != list->current) {
-    tempo = tempo->current;
+    tempo = tempo->next;
   }
   list->current = tempo;
 
-  return (list->tempo->data);
+  return (tempo->data);
 }
 
 void pushFront(List *list, void *data) {
