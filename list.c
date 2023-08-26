@@ -60,7 +60,11 @@ void *nextList(List *list) {
   return list->current->data;
 }
 
-void *lastList(List *list) { return NULL; }
+void *lastList(List *list) {
+  if (list->head == NULL) {
+    return NULL;
+  }
+}
 
 void *prevList(List *list) { return NULL; }
 
