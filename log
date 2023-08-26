@@ -325,3 +325,14 @@ Sat 26 Aug 2023 11:15:05 PM UTC:
  tests:  7|3
 total_score: 35/70
 c6817a5
+Sat 26 Aug 2023 11:18:53 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:71:13: error: ‘head’ undeclared (first use in this function)
+   71 |     tempo = head->next;
+      |             ^~~~
+list.c:71:13: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+97dd69a
