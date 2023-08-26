@@ -67,7 +67,7 @@ void *lastList(List *list) {
 
   Node *tempo = list->head;
 
-  while (tempo->next != NULL) {
+  while (tempo->next == NULL) {
     tempo = tempo->next;
   }
 
