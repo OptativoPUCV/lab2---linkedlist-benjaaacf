@@ -70,6 +70,10 @@ void *lastList(List *list) {
   while (tempo->next != NULL) {
     tempo = tempo->next;
   }
+
+  list->current = tempo;
+
+  return (tempo->data);
 }
 
 void *prevList(List *list) { return NULL; }
