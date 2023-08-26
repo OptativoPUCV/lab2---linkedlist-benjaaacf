@@ -82,14 +82,14 @@ void *prevList(List *list) {
     return NULL;
   }
 
-  Node *tempo = list->current;
+  Node *tempo = list->head;
 
   while (tempo->next != list->current) {
     tempo = tempo->next;
   }
   list->current = tempo;
 
-  return (list->tempo->data);
+  return (tempo->data);
 }
 
 void pushFront(List *list, void *data) {
