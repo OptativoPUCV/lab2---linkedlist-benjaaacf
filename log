@@ -336,3 +336,9 @@ list.c:71:13: error: ‘head’ undeclared (first use in this function)
 list.c:71:13: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 97dd69a
+Sat 26 Aug 2023 11:19:07 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|3
+total_score: 35/70
+71014e2
