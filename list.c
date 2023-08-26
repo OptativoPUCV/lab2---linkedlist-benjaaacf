@@ -76,7 +76,20 @@ void *lastList(List *list) {
   return (list->current->data);
 }
 
-void *prevList(List *list) { return NULL; }
+void *prevList(List *list) {
+  if (lista->head == NULL || list->current || list->current == list->head) {
+    return NULL;
+  }
+
+  Node *tempo = list->current;
+
+  while (tempo->next != list->current) {
+    tempo = tempo->current;
+  }
+  list->current = tempo;
+
+  return (list->tempo->data);
+}
 
 void pushFront(List *list, void *data) {
   Node *n = createNode(data);

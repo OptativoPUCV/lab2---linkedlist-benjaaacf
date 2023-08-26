@@ -384,3 +384,25 @@ Sat 26 Aug 2023 11:34:52 PM UTC:
  tests:  7|3
 total_score: 35/70
 f382d28
+Sat 26 Aug 2023 11:40:10 PM UTC: 
+ list.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:80:7: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   80 |   if (lista->head == NULL || list->current || list->current == list->head) {
+      |       ^~~~~
+      |       list
+list.c:80:7: note: each undeclared identifier is reported only once for each function it appears in
+list.c:87:18: error: ‘Node’ has no member named ‘current’
+   87 |     tempo = tempo->current;
+      |                  ^~
+list.c:91:15: error: ‘List’ {aka ‘struct List’} has no member named ‘tempo’
+   91 |   return (list->tempo->data);
+      |               ^~
+list.c:92:1: error: control reaches end of non-void function [-Werror=return-type]
+   92 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c08bd30
