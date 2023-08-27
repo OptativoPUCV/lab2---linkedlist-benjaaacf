@@ -124,7 +124,7 @@ void pushCurrent(List *list, void *data) {
   }
 
   if (list->tail == list->current) {
-    list->tail->prev = nNode;
+    list->tail = nNode;
   }
 }
 
