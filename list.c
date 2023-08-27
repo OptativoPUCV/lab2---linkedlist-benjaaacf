@@ -116,14 +116,12 @@ void pushCurrent(List *list, void *data) {
 
   Node *nNode = createNode(data);
   nNode->next = list->current->next;
+  nNode->prev = list->current;
   list->current->next = nNode;
 
-  Node *tempo = list->head;
-  while (tempo->next != list->current) {
-    tempo = tempo->next;
+  if (list->current->next != NULL) {
+    list->current->next->prev = nNode;
   }
-
-  nNode->prev = tempo;
 }
 
 void *popFront(List *list) {
