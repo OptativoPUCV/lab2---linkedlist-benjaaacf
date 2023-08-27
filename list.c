@@ -169,7 +169,6 @@ void *popCurrent(List *list) {
 
   return dataEliminada->data;
 }
-}
 
 void cleanList(List *list) {
   while (list->head != NULL) {
