@@ -109,7 +109,14 @@ void pushBack(List *list, void *data) {
   pushCurrent(list, data);
 }
 
-void pushCurrent(List *list, void *data) {}
+void pushCurrent(List *list, void *data) {
+  if (list->current == NULL) {
+    return;
+  }
+
+  Node *nNode = createNode(data);
+  nNode->next = list->current->next;
+}
 
 void *popFront(List *list) {
   list->current = list->head;
