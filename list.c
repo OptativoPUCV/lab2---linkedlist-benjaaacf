@@ -171,10 +171,8 @@ void *popCurrent(List *list) {
     aux->prev = list->current->prev;
 
     auxPrev->next = list->current->next;
-
-    list->current = list->head;
-
     free(list->current);
+    list->current = list->head;
   }
 
   return dataEliminada->data;
