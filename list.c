@@ -142,7 +142,7 @@ void *popCurrent(List *list) {
   Node *aux;
   Node *dataEliminada = createNode(list->current->data);
   if (list->head == list->tail) {
-    free(list->current);
+    
     list->head = NULL;
     list->tail = NULL;
     list->current = NULL;
@@ -156,14 +156,14 @@ void *popCurrent(List *list) {
     aux = list->current->prev;
     aux->next = NULL;
     list->tail = aux;
-    free(list->current);
+    
     list->current = list->head;
   } else {
     aux = list->current->next;
     Node *auxPrev = list->current->prev;
     aux->prev = list->current->prev;
     auxPrev->next = list->current->next;
-    free(list->current);
+    
     list->current = list->head;
   }
 
